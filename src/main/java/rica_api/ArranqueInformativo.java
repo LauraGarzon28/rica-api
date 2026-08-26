@@ -2,6 +2,8 @@ package rica_api;
 
 import org.springframework.stereotype.Component;
 
+import rica_api.services.SaludoInstitucionalService;
+
 @Component
 public class ArranqueInformativo {
     private final SaludoInstitucionalService saludoInstitucionalService;

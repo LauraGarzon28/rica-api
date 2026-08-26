@@ -1,4 +1,4 @@
-package rica_api;
+package rica_api.controllers;
 
 import java.util.Map;
 
