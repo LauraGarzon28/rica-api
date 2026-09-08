@@ -1,18 +1,11 @@
 package rica_api.repositories;
 
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import rica_api.Investigador;
 
-public interface InvestigadorRepository {
+public interface InvestigadorRepository extends JpaRepository<Investigador, Long> {
 
-    List<Investigador> findAll();
-
-    Optional<Investigador> findById(Long id);
-
-    Investigador save(Investigador investigador);
-
-    boolean existsByCorreoInstitucional(String correoInstitucional);
+   boolean existsByCorreoInstitucional(String correoInstitucional);
 
 }
