@@ -1,15 +1,8 @@
-package rica_api.models;
+package rica_api.publicaciones;
 
 import java.util.Map;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-import jakarta.persistence.Id;
-
-@Document(collection = "publicaciones")
-public class Publicacion {
-    
-    @Id 
-    private String id;
+public class PublicacionResponse {
 
     private String investigadorCorreo;
     private String titulo;
@@ -17,25 +10,13 @@ public class Publicacion {
     private String anio;
     private Map<String, String> detalles;
 
-    public Publicacion() {
-    }
-
-    public Publicacion(String id, String investigadorCorreo, String titulo, String tipo, String anio,
+    public PublicacionResponse(String investigadorCorreo, String titulo, String tipo, String anio,
             Map<String, String> detalles) {
-        this.id = id;
         this.investigadorCorreo = investigadorCorreo;
         this.titulo = titulo;
         this.tipo = tipo;
         this.anio = anio;
         this.detalles = detalles;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getInvestigadorCorreo() {

@@ -1,14 +1,9 @@
-package rica_api.controllers;
+package rica_api.publicaciones;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
-import rica_api.PublicacionRequest;
-import rica_api.PublicacionResponse;
-import rica_api.mappers.PublicacionMapper;
-import rica_api.models.Publicacion;
-import rica_api.services.PublicacionService;
 
 import java.net.URI;
 import java.util.List;

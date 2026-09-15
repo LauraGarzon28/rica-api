@@ -1,8 +1,6 @@
-package rica_api;
+package rica_api.plataforma;
 
 import org.springframework.stereotype.Component;
-
-import rica_api.services.SaludoInstitucionalService;
 
 @Component
 public class ArranqueInformativo {

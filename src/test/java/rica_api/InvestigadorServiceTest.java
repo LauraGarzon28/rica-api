@@ -13,11 +13,11 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import rica_api.exceptions.CorreoDuplicadoException;
-import rica_api.exceptions.RecursoNoEncontradoException;
-import rica_api.models.Investigador;
-import rica_api.repositories.InvestigadorRepository;
-import rica_api.services.InvestigadorService;
+import rica_api.compartido.RecursoNoEncontradoException;
+import rica_api.investigadores.CorreoDuplicadoException;
+import rica_api.investigadores.Investigador;
+import rica_api.investigadores.InvestigadorRepository;
+import rica_api.investigadores.InvestigadorService;
 
 @ExtendWith(MockitoExtension.class)
 public class InvestigadorServiceTest {

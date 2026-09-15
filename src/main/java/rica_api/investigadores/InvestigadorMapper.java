@@ -1,8 +1,4 @@
-package rica_api.mappers;
-
-import rica_api.InvestigadorRequest;
-import rica_api.InvestigadorResponse;
-import rica_api.models.Investigador;
+package rica_api.investigadores;
 
 public class InvestigadorMapper {
     

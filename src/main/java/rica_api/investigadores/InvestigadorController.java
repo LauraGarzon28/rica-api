@@ -1,13 +1,8 @@
-package rica_api.controllers;
+package rica_api.investigadores;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
-import rica_api.services.InvestigadorService;
-import rica_api.InvestigadorRequest;
-import rica_api.InvestigadorResponse;
-import rica_api.mappers.InvestigadorMapper;
-import rica_api.models.Investigador;
 
 import java.net.URI;
 import java.util.List;
