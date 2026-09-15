@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import rica_api.Investigador;
 import rica_api.exceptions.CorreoDuplicadoException;
 import rica_api.exceptions.RecursoNoEncontradoException;
+import rica_api.models.Investigador;
 import rica_api.repositories.InvestigadorRepository;
 
 @Service

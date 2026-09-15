@@ -15,6 +15,7 @@ import static org.mockito.Mockito.when;
 
 import rica_api.exceptions.CorreoDuplicadoException;
 import rica_api.exceptions.RecursoNoEncontradoException;
+import rica_api.models.Investigador;
 import rica_api.repositories.InvestigadorRepository;
 import rica_api.services.InvestigadorService;
 
