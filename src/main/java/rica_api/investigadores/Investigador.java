@@ -1,37 +1,37 @@
 package rica_api.investigadores;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-@Entity 
-@Table (name = "investigadores")
+@Entity
+@Table(name = "investigadores")
 public class Investigador {
 
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column (name = "nombre_completo", nullable = false, length = 150)
+    @Column(name = "nombre_completo", nullable = false, length = 150)
     private String nombreCompleto;
 
-    @Column (name = "correo_institucional", nullable = false, unique = true, length = 150)
-    private String correoInstitucional;
+    @Embedded
+    @AttributeOverride(name = "valor",
+            column = @Column(name = "correo_institucional", nullable = false, unique = true, length = 150))
+    private CorreoInstitucional correoInstitucional;
 
-    @Column (name = "grupo_investigacion", length = 150)
+    @Column(name = "grupo_investigacion", length = 150)
     private String grupoInvestigacion;
 
     public Investigador() {
     }
 
-    public Investigador(Long id, String nombreCompleto, String correoInstitucional, String grupoInvestigacion) {
+    public Investigador(Long id, String nombreCompleto, CorreoInstitucional correoInstitucional, String grupoInvestigacion) {
         this.id = id;
         this.nombreCompleto = nombreCompleto;
         this.correoInstitucional = correoInstitucional;
         this.grupoInvestigacion = grupoInvestigacion;
+    }
+
+    public Investigador(long id, String anaTorres, String mail, String grupoInvestigacion) {
     }
 
     public Long getId() {
@@ -50,14 +50,6 @@ public class Investigador {
         this.nombreCompleto = nombreCompleto;
     }
 
-    public String getCorreoInstitucional() {
-        return correoInstitucional;
-    }
-
-    public void setCorreoInstitucional(String correoInstitucional) {
-        this.correoInstitucional = correoInstitucional;
-    }
-
     public String getGrupoInvestigacion() {
         return grupoInvestigacion;
     }
@@ -66,4 +58,11 @@ public class Investigador {
         this.grupoInvestigacion = grupoInvestigacion;
     }
 
+    public CorreoInstitucional getCorreoInstitucional() {
+        return correoInstitucional;
+    }
+
+    public void setCorreoInstitucional(CorreoInstitucional correoInstitucional) {
+        this.correoInstitucional = correoInstitucional;
+    }
 }

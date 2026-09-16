@@ -3,21 +3,21 @@ package rica_api.publicaciones;
 import java.util.Map;
 
 public class PublicacionResponse {
-
     private String investigadorCorreo;
     private String titulo;
     private String tipo;
-    private String anio;
+    private Integer anio;
     private Map<String, String> detalles;
 
-    public PublicacionResponse(String investigadorCorreo, String titulo, String tipo, String anio,
-            Map<String, String> detalles) {
+    public PublicacionResponse(String investigadorCorreo, String titulo, String tipo, Integer anio, Map<String, String> detalles) {
         this.investigadorCorreo = investigadorCorreo;
         this.titulo = titulo;
         this.tipo = tipo;
         this.anio = anio;
         this.detalles = detalles;
     }
+
+    public PublicacionResponse() {}
 
     public String getInvestigadorCorreo() {
         return investigadorCorreo;
@@ -43,11 +43,11 @@ public class PublicacionResponse {
         this.tipo = tipo;
     }
 
-    public String getAnio() {
+    public Integer getAnio() {
         return anio;
     }
 
-    public void setAnio(String anio) {
+    public void setAnio(Integer anio) {
         this.anio = anio;
     }
 
@@ -58,5 +58,4 @@ public class PublicacionResponse {
     public void setDetalles(Map<String, String> detalles) {
         this.detalles = detalles;
     }
-    
 }
