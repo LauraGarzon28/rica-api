@@ -1,4 +1,6 @@
-package rica_api.investigadores;
+package rica_api.investigadores.aplicacion;
+
+import rica_api.investigadores.dominio.InvestigadorRegistrado;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

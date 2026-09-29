@@ -1,5 +1,6 @@
-package rica_api.investigadores;
+package rica_api.investigadores.infraestructura.salida.persistencia;
 
+import rica_api.investigadores.dominio.Investigador;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
