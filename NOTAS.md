@@ -6,4 +6,4 @@
 
 3. Falta una interfaz que actúe como puerto primario explícito (`InvestigadorUseCase`). Actualmente el controlador depende directamente de la clase concreta `InvestigadorService`. Al introducir dicha interfaz, se define un contrato explícito de los casos de uso que el núcleo expone al exterior.
 
-4. `InvestigadorFactory` pertenece al núcleo (capa de aplicación/dominio). Al revisar sus imports, se observa que no depende de tecnologías de infraestructura (ni HTTP, ni bases de datos directas), sino que encapsula la lógica de dominio y creación de la entidad usando abstracciones del núcleo.
+4. `InvestigadorFactory` pertenece al núcleo (capa de aplicación/dominio). Al revisar sus imports, se observa que no depende de tecnologías de infraestructura (ni HTTP, ni bases de datos directas), sino que encapsula la lógica de dominio y creación de la entidad usando abstracciones del núcleo.
